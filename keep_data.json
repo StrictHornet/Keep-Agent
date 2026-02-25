@@ -1,0 +1,122 @@
+[
+  {
+    "id": "note_0001",
+    "title": "URGENT - Tax deadline",
+    "textContent": "File self-assessment tax return ASAP. Deadline Jan 31. Need to gather receipts from freelance work.",
+    "createdTimestampUsec": 1700000000000000,
+    "userEditedTimestampUsec": 1700000000000000,
+    "labels": [{"name": "finance"}],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0002",
+    "title": "",
+    "textContent": "Look into that thing",
+    "createdTimestampUsec": 1690000000000000,
+    "userEditedTimestampUsec": 1690000000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0003",
+    "title": "Gym routine",
+    "textContent": "Start going to gym 3x per week. Morning sessions before work. Need to cancel old membership first.",
+    "createdTimestampUsec": 1695000000000000,
+    "userEditedTimestampUsec": 1695000000000000,
+    "labels": [{"name": "health"}],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0004",
+    "title": "App idea - habit tracker",
+    "textContent": "Build a minimal habit tracker that just tracks streaks. No bloat. Maybe use React Native. Could be a good portfolio piece.",
+    "createdTimestampUsec": 1698000000000000,
+    "userEditedTimestampUsec": 1698000000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0005",
+    "title": "Dentist",
+    "textContent": "Book dentist appointment. Haven't been in over a year.",
+    "createdTimestampUsec": 1685000000000000,
+    "userEditedTimestampUsec": 1685000000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0006",
+    "title": "CV update",
+    "textContent": "Update CV with latest project. Add the API integration work. Need to do this before applying anywhere.",
+    "createdTimestampUsec": 1702000000000000,
+    "userEditedTimestampUsec": 1702000000000000,
+    "labels": [{"name": "career"}],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0007",
+    "title": "",
+    "textContent": "Wifi password: Br1ghtStar_2024",
+    "createdTimestampUsec": 1701000000000000,
+    "userEditedTimestampUsec": 1701000000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0008",
+    "title": "Tax return",
+    "textContent": "Self assessment - need to file. Check HMRC portal. Gather receipts.",
+    "createdTimestampUsec": 1701500000000000,
+    "userEditedTimestampUsec": 1701500000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0009",
+    "title": "Learn Rust",
+    "textContent": "Start learning Rust. Good for systems programming. Try the Rust book online first.",
+    "createdTimestampUsec": 1688000000000000,
+    "userEditedTimestampUsec": 1688000000000000,
+    "labels": [{"name": "learning"}],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0010",
+    "title": "Mum birthday",
+    "textContent": "Mum's birthday March 15. Get her something nice this year. She mentioned wanting a kindle.",
+    "createdTimestampUsec": 1704000000000000,
+    "userEditedTimestampUsec": 1704000000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0011",
+    "title": "",
+    "textContent": "???",
+    "createdTimestampUsec": 1680000000000000,
+    "userEditedTimestampUsec": 1680000000000000,
+    "labels": [],
+    "isArchived": false,
+    "isTrashed": false
+  },
+  {
+    "id": "note_0012",
+    "title": "Budget",
+    "textContent": "Set up a proper budget spreadsheet. Track subscriptions. Cancel unused ones - probably saving £50/month.",
+    "createdTimestampUsec": 1697000000000000,
+    "userEditedTimestampUsec": 1697000000000000,
+    "labels": [{"name": "finance"}],
+    "isArchived": false,
+    "isTrashed": false
+  }
+]

@@ -1,0 +1,55 @@
+name: 🧠 Keep Intelligence Agent
+
+on:
+  # Manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      log_level:
+        description: 'Log level'
+        required: false
+        default: 'INFO'
+        type: choice
+        options:
+          - DEBUG
+          - INFO
+          - WARNING
+
+  # Automated: 5:00 AM GMT and 5:00 PM GMT daily
+  schedule:
+    - cron: '0 5 * * *'   # 5:00 AM UTC/GMT
+    - cron: '0 17 * * *'  # 5:00 PM UTC/GMT
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: pip install openai
+
+      - name: 🧠 Run Keep Agent
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          KEEP_DATA_PATH: keep_data/
+          LOG_LEVEL: ${{ inputs.log_level || 'INFO' }}
+        working-directory: keep_agent
+        run: python agent.py
+
+      - name: 💾 Upload analysis artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keep-analysis-${{ github.run_number }}
+          path: keep_agent/output/
+          retention-days: 30
