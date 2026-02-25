@@ -80,12 +80,27 @@ def load_keep_notes(data_path: Path) -> list[dict]:
         raw_notes = []
         for f in sorted(data_path.glob("*.json")):
             try:
-                raw_notes.append(json.loads(f.read_text(encoding="utf-8")))
+                parsed = json.loads(f.read_text(encoding="utf-8"))
+                if isinstance(parsed, list):
+                    raw_notes.extend(parsed)
+                else:
+                    raw_notes.append(parsed)
             except json.JSONDecodeError:
                 log.warning(f"Skipping malformed file: {f.name}")
     else:
         log.error(f"Keep data path not found: {data_path}")
         sys.exit(1)
+
+    # Flatten any nested lists (Takeout sometimes nests lists)
+    flat_notes = []
+    for item in raw_notes:
+        if isinstance(item, list):
+            flat_notes.extend(item)
+        elif isinstance(item, dict):
+            flat_notes.append(item)
+        else:
+            log.warning(f"Skipping unexpected item type: {type(item)}")
+    raw_notes = flat_notes
 
     for i, raw in enumerate(raw_notes):
         # Google Takeout uses 'textContent' or 'listContent'
